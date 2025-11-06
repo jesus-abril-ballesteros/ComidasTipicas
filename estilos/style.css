@@ -1,0 +1,180 @@
+
+/* TÍTULO */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fafafa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    background-color: #c62828;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/*MENU*/
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  gap: 1rem; 
+  display: flex;
+  padding: 0;
+  margin-left: 100;
+}
+
+/* CONTENEDOR PRINCIPAL DE LOS PLATOS */
+.contenedor-platos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* TARJETAS DE CADA PLATO */
+.plato {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.plato:hover {
+    transform: scale(1.05);
+}
+
+.plato img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+}
+.plato p {
+  font-weight: bold;
+  color: #c62828;
+  margin-top: 10px;
+}
+
+/* --- Ajuste automático en pantallas pequeñas --- */
+@media (max-width: 768px) {
+  .contenedor-platos {
+    grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-platos {
+    grid-template-columns: 1fr; /* una columna en celulares */
+  }
+}
+
+h2 {
+    color: #c62828;
+}
+
+/* VIDEO */
+.video {
+    text-align: center;
+    margin: 40px 0;
+}
+
+video {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de ubicación */
+.info-ubicacion {
+  text-align: center;
+  margin: 30px auto;
+  width: 80%;
+}
+
+.info-ubicacion h2 {
+  color: #c62828;
+}
+
+/* Sección de contactos */
+.equipo-contacto {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.equipo-contacto h2 {
+  color: #c62828;
+  margin-bottom: 20px;
+}
+
+/* Tarjetas del personal */
+.tarjetas-contacto {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.tarjeta {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta img {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+  color: #c62828;
+  margin: 10px 0 5px;
+}
+
+.tarjeta p {
+  margin: 5px 0;
+}
+
+/* Mapa */
+.mapa {
+  text-align: center;
+  margin: 50px 0;
+}
+
+iframe {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tarjetas-contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    width: 90%;
+    height: 350px;
+  }
+}
